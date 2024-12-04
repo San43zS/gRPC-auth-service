@@ -39,7 +39,7 @@ func (a *App) Run() error {
 	}
 
 	log.Infof("grpc server is running address: %s", listener.Addr())
-
+	fmt.Println("grpc server is running address: %s", listener.Addr())
 	if err := a.gRPCServer.Serve(listener); err != nil {
 		return fmt.Errorf("Error starting gRPC server: %s", err)
 	}
